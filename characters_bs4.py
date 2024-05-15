@@ -69,3 +69,28 @@ items = soup.find_all('item', {'id':True})
 for item in items:
 	if item['id'] in items_ids:
 		print("\tItems:\t"+item.find("item").text)
+
+matar = True
+while matar:
+	respuesta = input("\nQuieres matar a algún personaje (R: si/no)? ")
+	if respuesta == "no":
+		matar = False
+	else:
+		id = input("\nIntroduce el número del personaje: ")
+		file = open('characters.facx', 'r')
+		soup = BeautifulSoup(file, 'xml')
+		file.close()
+
+		eliminar = soup.find('character', {'id': id})
+		if eliminar:
+			print(f"Se ha matado al personaje: {eliminar.find('name').text}")
+			eliminar.extract()
+
+			edicion = str(soup)
+			file = open('characters.facx', 'w')
+			file.write(edicion)
+			file.close()
+
+		else:
+			print("No se encontró el personaje que has marcado")
+		

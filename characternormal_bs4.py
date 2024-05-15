@@ -9,6 +9,6 @@ soup = BeautifulSoup(file, 'xml')
 characters = soup.find_all("character")
 
 for character in characters:
-	print(f"{character['id']}\t {character.find('name').text}\t\t{character.find('age').text}\t{chharacter.find('level')['value']}")
+	print(f"{character['id']}\t {character.find('name').text}\t\t{character.find('age').text}\t{character.find('level')['value']}")
 
 
