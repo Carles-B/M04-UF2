@@ -2,27 +2,27 @@
 <character_weapons>
 	<character_weapon id = "1">
 		<character id="1"/>
-		<weapon id="1" quantity="3"/>
+		<weapon id="1"/>
 	</character_weapon>
 	<character_weapon id = "2">
 		<character id="2"/>
-		<weapon id="1" quantity="1"/>
+		<weapon id="1"/>
 	</character_weapon>
 	<character_weapon id = "3">
 		<character id="3"/>
-		<weapon id="3" quantity="1"/>
+		<weapon id="3"/>
 	</character_weapon>
 	<character_weapon id = "4">
 		<character id="4"/>	
-		<weapon id="4" quantity="1"/>
+		<weapon id="4"/>
 	</character_weapon>
 	<character_weapon id = "5">
 		<character id="2"/>
-		<weapon id="2" quantity="1"/>
+		<weapon id="2"/>
 	</character_weapon>
 	<character_weapon id = "5">
 		<character id="4"/>	
-		<weapon id="2" quantity="1"/>
+		<weapon id="2"/>
 	</character_weapon>
 </character_weapons>		
 

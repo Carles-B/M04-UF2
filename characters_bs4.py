@@ -92,10 +92,12 @@ soup = BeautifulSoup(file, 'xml')
 file.close()
 
 weapons = soup.find_all('weapon', {'id':True})
-
+total_damage = 0
 for weapon in weapons:
     if weapon['id'] in weapons_ids:
-        print("\tDaño:\t"+weapon.find("damage")['value'])
+        total_damage = int(weapon.find("damage")['value']) + total_damage
+
+print(f"\tDaño:\t{total_damage}")
 
 matar = True
 while matar:
