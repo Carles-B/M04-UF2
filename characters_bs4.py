@@ -70,6 +70,33 @@ for item in items:
 	if item['id'] in items_ids:
 		print("\tItems:\t"+item.find("item").text)
 
+file = open('characters_weapons.facix', 'r')
+soup = BeautifulSoup(file, 'xml')
+file.close()
+characters_weapons = soup.find_all('character_weapon')
+weapons_ids = []
+
+for character_weapon in characters_weapons:
+    id_character = character_weapon.find("character")["id"]
+
+    if id_character == id:
+
+        id_weapon = character_weapon.find("weapon")["id"]
+
+        weapons_ids.append(id_weapon)
+
+file = open('weapons.faix', 'r')
+
+soup = BeautifulSoup(file, 'xml')
+
+file.close()
+
+weapons = soup.find_all('weapon', {'id':True})
+
+for weapon in weapons:
+    if weapon['id'] in weapons_ids:
+        print("\tDaño:\t"+weapon.find("damage")['value'])
+
 matar = True
 while matar:
 	respuesta = input("\nQuieres matar a algún personaje (R: si/no)? ")

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weapons>
+	<weapon id="1">
+		<weapon>Katana</weapon>
+		<type>Cortante</type>
+		<rarity value="5" />
+		<damage value="40" />
+	</weapon>
+	<weapon id ="2">
+    	<weapon>Wunderwaffe DG-2</weapon>
+		<type>Electrica</type>
+	    <rarity value="100" />
+        <damage value="60" />
+	    </weapon>
+	<weapon id ="3">
+		<weapon>Sarten</item>
+		<type>Contundente</type>
+		<rarity value="10" />
+		<damage value="15" />
+	</weapon>
+	<weapon id ="4">
+		<weapon>platano</weapon>
+		<type>?</type>
+		<rarity value="5" />
+		<damage value="999">
+	</weapon>
+</weapons>
