@@ -82,7 +82,6 @@ for character_weapon in characters_weapons:
     if id_character == id:
 
         id_weapon = character_weapon.find("weapon")["id"]
-
         weapons_ids.append(id_weapon)
 
 file = open('weapons.faix', 'r')
@@ -95,6 +94,7 @@ weapons = soup.find_all('weapon', {'id':True})
 total_damage = 0
 for weapon in weapons:
     if weapon['id'] in weapons_ids:
+
         total_damage = int(weapon.find("damage")['value']) + total_damage
 
 print(f"\tDaño:\t{total_damage}")
